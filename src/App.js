@@ -21,7 +21,6 @@ function App() {
       ) : (
         'Initializing...'
       )}
-      <footer>footer</footer>
     </>
   );
 }

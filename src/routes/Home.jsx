@@ -23,6 +23,9 @@ const Home = ({ userObj }) => {
     setTweet(value);
   };
 
+  const onFileChange = (event) => {
+    console.log(event);
+  };
   const onSubmit = async (event) => {
     event.preventDefault();
     await dbService.collection('tweet').add({
@@ -43,6 +46,7 @@ const Home = ({ userObj }) => {
           maxLength={120}
           value={tweet}
         />
+        <input type="file" accept="image/*" onChange={onFileChange} />
         <input type="submit" value="Tweet" />
       </form>
       <div>
