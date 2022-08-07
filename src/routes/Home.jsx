@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 const Home = ({ userObj }) => {
   const [tweet, setTweet] = useState('');
   const [tweets, setTweets] = useState([]);
-  const [attachment, setAttachment] = useState();
+  const [attachment, setAttachment] = useState('');
 
   useEffect(() => {
     dbService.collection('tweet').onSnapshot((snapshot) => {
